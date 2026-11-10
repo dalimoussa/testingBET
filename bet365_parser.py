@@ -30,15 +30,14 @@ NB_MAX_MARCHES  = 3  # Nombre maximal de marchés ou fixtures détaillées
 
 FAST_MODE       = True
 BLOCK_HEAVY_RESOURCES = True
-PARALLEL_MATCHES = True
-MAX_MATCH_WORKERS = 5
+PARALLEL_MATCHES = False
+MAX_MATCH_WORKERS = 19
 
 ENABLE_DEBUG    = True
 TRACE_LOG_FILE   = 'DEBUG_BET365_trace.log'
 
 
 def log_trace(message):
-    """Écrit un log de diagnostic dans le terminal et dans un fichier."""
     if not ENABLE_DEBUG:
         return
     ligne = '[TRACE] ' + str(message)
@@ -59,7 +58,7 @@ CHAMPIONNATS_VOULUS = {
     "UEFA Europa League Qualifying", "UEFA Conference League Qualifying",
     "Italy Serie A", "Italy Serie B", "Spain Segunda",
     "Germany Bundesliga I", "Germany Super Cup", "France Ligue 1",
-    "Portugal Primeira Liga", "Copa Libertadores", "Copa Sudamericana",
+
 }
 
 SPORTS_DIRECTS = [
