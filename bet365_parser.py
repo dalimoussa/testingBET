@@ -634,7 +634,6 @@ def parser_basket_grilles(blocs, nom_sport, tournoi):
                 'Cote_Decimale_Brute': fraction_to_decimal(b.get('OD', '')),
                 'Cote_Fraction': b.get('OD', ''),
                 'Cote_Decimale': fraction_to_decimal(b.get('OD', '')),
-                'Cote_Decimale_Ecran': None, 'Cote_Affichee': None,
                 'Source_Cote': 'api_brute_grille_basket',
                 'Cote_PV_Applique': False, 'Combi_Booste': False,
             })
