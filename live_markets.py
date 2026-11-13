@@ -58,11 +58,8 @@ CANONICAL_MARKET_IDS: Dict[str, str] = {
     "Draw No Bet": "10149",
     "Half Time/Full Time": "10152",
     "Correct Score": "10151",
-    "Asian Handicap": "10148",
     "Match Winner": "40",
     "Moneyline": "40",
-    "Race Winner": "40",
-    "Podium Finish": "40",
     "Outright Winner": "40",
 }
 
