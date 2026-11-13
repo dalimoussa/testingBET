@@ -55,7 +55,6 @@ CANONICAL_MARKET_IDS: Dict[str, str] = {
     "Both Teams to Score": "10150",
     "Goals Over/Under": "981",
     "Double Chance": "10114",
-    "Draw No Bet": "10149",
     "Half Time/Full Time": "10152",
     "Correct Score": "10151",
     "Match Winner": "40",
@@ -205,7 +204,6 @@ def screen_rows(page: Any, rows: List[Dict[str, Any]], ki: str = "1", l3: str = 
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Raw-feed parsing (independent of bet365_internal's universal parser)
 # ─────────────────────────────────────────────────────────────────────────────
 def parse_bet365_blocks(raw: str) -> List[Dict[str, str]]:
     """Bet365 frame decoding: blocks by '|', fields by ';', key=value."""
