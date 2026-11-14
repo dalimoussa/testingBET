@@ -1,21 +1,3 @@
-"""
-Bet365 France Multi-Sport Real-Time Automation Pipeline
-=======================================================
-Senior Python Automation Engineer Edition
-
-Extracts verified, real-time sports data from Bet365 France via Chrome DevTools Protocol (CDP)
-and exports validated data to all_matches.json.
-
-Strict Data Constraints:
-- Soccer: 1X2, O/U 2.5, BTTS, Double Chance, DNB
-- Tennis: ATP Shanghai Match Winner
-- Basketball: EuroLeague Point Spread, Total >= 100.0, Moneyline
-- Handball: Starligue/EHF Handicap, Total <= 90.0, Match Result
-- Cycling: Active race odds or empty list
-- Formula 1: Race Winner, Podium
-- Golf: Outright winner markets with player rosters (or empty list if suspended)
-- Programmatic validation: Zero synthetic data guarantee & cross-sport contamination prevention.
-"""
 
 import argparse
 import json
@@ -93,7 +75,7 @@ def main():
         if not os.path.exists(args.out):
             print(f"[ERROR] Target file {args.out} does not exist for verification.")
             sys.exit(1)
-        with open(args.out, "r", encoding="utf-8") as f:
+        with open(args.out, "r","w", encoding="utf-8") as f:
             data = json.load(f)
         ok, errors = validate_pipeline_dataset(data)
         if ok:
