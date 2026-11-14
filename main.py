@@ -72,11 +72,11 @@ def run_single_cycle(args, cycle_num: int = 1) -> bool:
         status_tag = f"[{sport_group.get('status', 'available').upper()}]"
         print(f"  * {sp:<12}: {len(m_list):>3} verified matches / events {status_tag}")
 
-    print("-" * 70)
+    print("-" * 80)
     print(f"  Total Verified Records : {total_matches}")
     print(f"  Execution Time         : {elapsed:.2f} seconds")
     print(f"  Destination Artifact   : {os.path.abspath(args.out)}")
-    print("=" * 70)
+    print("=" * 80)
     return True
 
 
@@ -118,9 +118,9 @@ def main():
                 print(f"\n[DAEMON] Sleeping {args.interval}s until next refresh... (Press Ctrl+C to stop)")
                 time.sleep(args.interval)
         except KeyboardInterrupt:
-            print("\n\n" + "=" * 70)
+            print("\n\n" + "=" * 80)
             print("  [DAEMON] Interrupted by user (Ctrl+C). Shutting down daemon gracefully.")
-            print("=" * 70)
+            print("=" * 80)
             sys.exit(0)
     else:
         success = run_single_cycle(args, 1)
